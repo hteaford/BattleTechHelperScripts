@@ -3,7 +3,7 @@
 ###Optional Features: add option to enable house rule through armor crit 
 import random
 ###Variable Collection
-DICE_ROLL = ['2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+DICE_ROLL = DICE_ROLL = ['1', '2', '3', '4', '5', '6']
 TOTAL_DICE_TO_ROLL = int(input("Enter Number of Dice to roll(Default of 1): ") or 1)
 
 MECH_FACING = ['Front', 'Left', 'Right']
@@ -53,7 +53,9 @@ else:
     MECH_LOOKUP_TABLE = NESTED_QUAD_LOCATION_TABLE
 ### Function
 def DICE_ROLLER():
-    DICE_ROLLED = int(random.choice(DICE_ROLL))
+    DICE_ROLL_1 = int(random.choice(DICE_ROLL))
+    DICE_ROLL_2 = int(random.choice(DICE_ROLL))
+    DICE_ROLLED = int(DICE_ROLL_1 + DICE_ROLL_2)
     LOCATION = MECH_LOOKUP_TABLE.get(DICE_ROLLED)
     FIRING_ARC_LOCATION = LOCATION[MECH_FACE]
     print(f"Dice roll: {DICE_TO_ROLL} Dice Result: {DICE_ROLLED} Location: {FIRING_ARC_LOCATION}")

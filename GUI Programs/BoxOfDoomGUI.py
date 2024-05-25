@@ -19,7 +19,7 @@ DOOM_BOX.title("Box Of Doom")
 DOOM_BOX.geometry("820x550")
 ###Variable Collection
 #Dice
-DICE_ROLL = ['2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+DICE_ROLL = ['1', '2', '3', '4', '5', '6']
 DOOM_DICE_TO_ROLL = IntVar()
 DOOM_DICE_TO_ROLL_DEF = OptionMenu(DOOM_BOX, DOOM_DICE_TO_ROLL, 1)
 #Mech Facing
@@ -68,7 +68,9 @@ def MULTI_ROLL():
     DOOM_DICE_TO_ROLL_DEF = int(NUM_OF_DOOM_DICE_ENTRY.get())
     DOOM_DICE_TO_ROLL_DEF += 1
     for DICE_TO_ROLL in range(1,DOOM_DICE_TO_ROLL_DEF):
-        DICE_ROLLED = int(random.choice(DICE_ROLL))
+        DICE_ROLL_1 = int(random.choice(DICE_ROLL))
+        DICE_ROLL_2 = int(random.choice(DICE_ROLL))
+        DICE_ROLLED = int(DICE_ROLL_1 + DICE_ROLL_2)
         LOCATION = MECH_LOOKUP_TABLE.get(DICE_ROLLED)
         FIRING_ARC_LOCATION = LOCATION[MECH_FACING_DEF.get()]
         print(f"Dice Roll: Dice Roll: {DICE_TO_ROLL} Dice Result: {DICE_ROLLED} Location: {FIRING_ARC_LOCATION}")
