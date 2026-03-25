@@ -14,10 +14,12 @@ I created this repo because I like playing Battletech and I wanted to write some
 - ✅ Created comprehensive unit tests (35 tests passing)
 - ✅ Created CLI wrapper for testing compatibility
 
-**Phase 2: Kivy GUI (Desktop First) 🔄 IN PROGRESS**
-- Build Kivy GUI for desktop platforms
-- Add session history tracking
-- Test on Linux/Windows
+**Phase 2: Kivy GUI (Desktop First) ✅ BASIC IMPLEMENTATION COMPLETE**
+- ✅ Created Kivy GUI with mech configuration forms
+- ✅ Added weapon selection interface
+- ✅ Implemented results display and session history
+- ✅ Tested GUI launch on Linux
+- 🔄 Needs: Windows testing, UI refinements
 
 **Phase 3: Android APK Build 📋 PLANNED**
 - Package for Android deployment
@@ -43,11 +45,10 @@ BattleTechHelperScripts/
 └── kivy_app.py            # Kivy GUI (Phase 2)
 ```
 
-## Features
+## Requirements
 
-### Current Features
-- **Hit Location Tables**: Biped and Quad mech hit location calculations
-- **Weapon System**: 11 weapon types with heat, damage, and range calculations
+- **Python 3.13** (Kivy currently has compatibility issues with Python 3.14)
+- Dependencies listed in `requirements.txt`
 - **Cluster Weapons**: SRM6, LRM10, MRM10 with proper hit distribution
 - **Range Modifiers**: Short/Medium/Long range bracket detection
 - **Target Number Calculation**: Pilot skill + movement + range + weapon modifiers

@@ -7,4 +7,4 @@ tabulate>=0.9.0  # For formatted table output in CLI
 pytest>=7.0.0    # Unit testing framework
 
 # Future GUI dependencies (for Phase 2)
-# kivy>=2.1.0     # Cross-platform GUI framework
+kivy>=2.1.0     # Cross-platform GUI framework
